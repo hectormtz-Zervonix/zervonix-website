@@ -308,10 +308,50 @@ a.nav__dropdown-item:hover,
   pointer-events: none;
 }
 
+.hero__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
 .hero__content {
-  max-width: 720px;
   position: relative;
   z-index: 1;
+}
+
+.hero__visual {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+}
+
+.hero__svg {
+  width: 100%;
+  max-width: 500px;
+  opacity: 0.92;
+  animation: hero-float 6s ease-in-out infinite;
+}
+
+@keyframes hero-float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+
+@media (max-width: 900px) {
+  .hero__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .hero__visual {
+    order: -1;
+  }
+  .hero__svg {
+    max-width: 340px;
+    animation: none;
+  }
 }
 
 .hero__brand-row {
