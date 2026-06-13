@@ -314,8 +314,26 @@ a.nav__dropdown-item:hover,
   z-index: 1;
 }
 
-.hero__badge {
-  margin-bottom: 24px;
+.hero__brand-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 28px;
+}
+
+.hero__isotipo {
+  width: 108px;
+  height: 108px;
+  object-fit: contain;
+  flex-shrink: 0;
+  filter: drop-shadow(0 0 32px rgba(138, 101, 232, 0.55));
+}
+
+@media (max-width: 640px) {
+  .hero__isotipo {
+    width: 72px;
+    height: 72px;
+  }
 }
 
 .hero__title {
