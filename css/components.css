@@ -352,6 +352,13 @@ a.nav__dropdown-item:hover,
     max-width: 340px;
     animation: none;
   }
+  .hero__actions {
+    flex-wrap: nowrap;
+  }
+  .hero__actions .btn {
+    flex: 1;
+    min-width: 0;
+  }
 }
 
 .hero__brand-row {
