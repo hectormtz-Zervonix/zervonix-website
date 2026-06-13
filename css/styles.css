@@ -1,0 +1,261 @@
+/* ============================================================
+   ZERVONIX — Design System
+   styles.css: Variables, reset, base typography, layout utilities
+   ============================================================ */
+
+/* ============================================================
+   CSS CUSTOM PROPERTIES
+   ============================================================ */
+:root {
+  /* Colors */
+  --color-bg:           #0a0d14;
+  --color-bg-elevated:  #0d1117;
+  --color-bg-card:      #0f1420;
+  --color-purple:       #8A65E8;
+  --color-purple-bright:#A07AF0;
+  --color-purple-dark:  #7250D4;
+  --color-aws:          #FF9900;
+  --color-white:        #F8F6FF;
+  --color-text-secondary: #94a3b8;
+  --color-text-muted:   #64748b;
+  --color-border:       rgba(138, 101, 232, 0.2);
+
+  /* Typography */
+  --font-sans:  'Inter', system-ui, -apple-system, sans-serif;
+  --font-brand: 'Nunito', sans-serif;
+  --font-mono:  'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Spacing */
+  --container-max: 1200px;
+  --container-pad: 24px;
+  --section-py-desktop: 80px;
+  --section-py-mobile:  48px;
+  --card-gap: 20px;
+
+  /* Transitions */
+  --transition-fast: 0.15s ease;
+  --transition-base: 0.2s ease;
+  --transition-slow: 0.3s ease;
+
+  /* Radii */
+  --radius-sm:  6px;
+  --radius-md:  10px;
+  --radius-lg:  12px;
+  --radius-xl:  16px;
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-white);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ============================================================
+   BASE TYPOGRAPHY
+   ============================================================ */
+h1 {
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+
+h2 {
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+
+h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.35;
+}
+
+h4 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  line-height: 1.7;
+  color: var(--color-text-secondary);
+}
+
+code, pre {
+  font-family: var(--font-mono);
+  font-size: 0.875em;
+}
+
+/* ============================================================
+   LAYOUT UTILITIES
+   ============================================================ */
+.container {
+  max-width: var(--container-max);
+  margin: 0 auto;
+  padding: 0 var(--container-pad);
+  width: 100%;
+}
+
+.section {
+  padding: var(--section-py-desktop) 0;
+}
+
+.section--elevated {
+  background-color: var(--color-bg-elevated);
+}
+
+.section__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.section__title {
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.section__subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1.05rem;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+/* ============================================================
+   BUTTONS
+   ============================================================ */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-base);
+  text-decoration: none;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.btn--primary {
+  background: var(--color-purple);
+  color: #ffffff;
+}
+
+.btn--primary:hover {
+  background: var(--color-purple-bright);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(138, 101, 232, 0.35);
+}
+
+.btn--primary:active {
+  transform: translateY(0);
+  background: var(--color-purple-dark);
+}
+
+.btn--outline {
+  background: transparent;
+  color: var(--color-purple-bright);
+  border: 1.5px solid var(--color-purple);
+}
+
+.btn--outline:hover {
+  background: rgba(138, 101, 232, 0.12);
+  border-color: var(--color-purple-bright);
+}
+
+.btn--large {
+  padding: 16px 32px;
+  font-size: 1rem;
+  border-radius: 8px;
+}
+
+/* ============================================================
+   BADGES / PILLS
+   ============================================================ */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: 100px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  border: 1px solid var(--color-border);
+  color: var(--color-purple-bright);
+  background: rgba(138, 101, 232, 0.08);
+}
+
+.badge--aws {
+  border-color: rgba(255, 153, 0, 0.4);
+  color: var(--color-aws);
+  background: rgba(255, 153, 0, 0.08);
+}
+
+/* ============================================================
+   RESPONSIVE BASE
+   ============================================================ */
+@media (max-width: 640px) {
+  :root {
+    --section-py-desktop: 48px;
+    --container-pad: 16px;
+  }
+
+  .section__header {
+    margin-bottom: 32px;
+  }
+}
