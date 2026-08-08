@@ -28,14 +28,17 @@
   /* Spacing */
   --container-max: 1200px;
   --container-pad: 24px;
-  --section-py-desktop: 80px;
-  --section-py-mobile:  48px;
-  --card-gap: 20px;
+  --section-py-desktop: 100px;
+  --section-py-mobile:  60px;
+  --card-gap: 24px;
 
   /* Transitions */
   --transition-fast: 0.15s ease;
-  --transition-base: 0.2s ease;
-  --transition-slow: 0.3s ease;
+  --transition-base: 0.25s ease;
+  --transition-slow: 0.4s ease;
+
+  /* Glow Effects */
+  --glow-opacity: 0.15;
 
   /* Radii */
   --radius-sm:  6px;
@@ -244,6 +247,13 @@ code, pre {
   border-color: rgba(255, 153, 0, 0.4);
   color: var(--color-aws);
   background: rgba(255, 153, 0, 0.08);
+}
+
+.badge--minimal {
+  background: transparent;
+  border: none;
+  padding: 0;
+  font-size: 0.85rem;
 }
 
 /* ============================================================

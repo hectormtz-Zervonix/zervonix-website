@@ -394,7 +394,7 @@ a.nav__dropdown-item:hover,
 .hero__subtitle {
   font-size: 1.3rem;
   color: var(--color-purple-bright);
-  font-weight: 500;
+  font-weight: 400;
   margin-bottom: 16px;
   line-height: 1.4;
 }
@@ -440,7 +440,7 @@ a.nav__dropdown-item:hover,
 }
 
 .stats-bar__value {
-  font-size: 2.5rem;
+  font-size: 2.75rem;
   font-weight: 800;
   color: var(--color-purple-bright);
   line-height: 1;
@@ -452,7 +452,7 @@ a.nav__dropdown-item:hover,
   font-size: 0.82rem;
   color: var(--color-text-muted);
   font-weight: 500;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 
@@ -492,9 +492,10 @@ a.nav__dropdown-item:hover,
 }
 
 .challenge__option:hover {
-  border-color: rgba(138, 101, 232, 0.45);
+  border-color: var(--color-purple);
+  background: rgba(138, 101, 232, 0.05);
   color: var(--color-white);
-  background: rgba(138, 101, 232, 0.06);
+  transform: translateY(-2px);
 }
 
 .challenge__option.active {
@@ -505,9 +506,16 @@ a.nav__dropdown-item:hover,
 }
 
 .challenge__option-icon {
-  font-size: 1.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-shrink: 0;
-  line-height: 1;
+  color: var(--color-purple-bright);
+}
+
+.challenge__option-icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .challenge__description {
@@ -575,9 +583,20 @@ a.nav__dropdown-item:hover,
 }
 
 .service-card__icon {
-  font-size: 2rem;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(138, 101, 232, 0.1);
+  border-radius: 12px;
   margin-bottom: 16px;
-  line-height: 1;
+  color: var(--color-purple-bright);
+}
+
+.service-card__icon svg {
+  width: 24px;
+  height: 24px;
 }
 
 .service-card__title {
@@ -601,17 +620,23 @@ a.nav__dropdown-item:hover,
   font-weight: 600;
   display: inline-flex;
   align-items: center;
-  gap: 4px;
+  gap: 6px;
   transition: gap var(--transition-fast), color var(--transition-fast);
   text-decoration: none;
 }
 
-.service-card:hover .service-card__link {
-  gap: 8px;
+.service-card__link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+}
+
+.service-card:hover .service-card__link svg {
+  transform: translateX(4px);
 }
 
 .service-card--coming-soon {
-  opacity: 0.6;
+  opacity: 0.7;
   pointer-events: none;
 }
 
@@ -630,87 +655,43 @@ a.nav__dropdown-item:hover,
 /* ============================================================
    AWS PARTNER
    ============================================================ */
-.aws-partner {
+/* ============================================================
+   AWS EXPERTISE (replaces AWS Partner)
+   ============================================================ */
+.aws-expertise {
   background: var(--color-bg-elevated);
   border-top: 1px solid var(--color-border);
   border-bottom: 1px solid var(--color-border);
 }
 
-.aws-partner__inner {
-  display: flex;
-  align-items: center;
-  gap: 48px;
-}
-
-.aws-partner__badge {
-  flex-shrink: 0;
-  width: 120px;
-  height: 120px;
-  border: 2px solid rgba(255, 153, 0, 0.4);
-  border-radius: var(--radius-lg);
-  background: rgba(255, 153, 0, 0.06);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-  padding: 16px;
-}
-
-.aws-partner__badge-logo {
-  font-size: 1.6rem;
-  font-weight: 900;
-  color: var(--color-aws);
-  font-family: var(--font-brand);
-  letter-spacing: -0.02em;
-  line-height: 1;
-}
-
-.aws-partner__badge-sub {
-  font-size: 0.6rem;
-  color: var(--color-aws);
-  font-family: var(--font-mono);
-  text-align: center;
-  line-height: 1.4;
-  opacity: 0.85;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-}
-
-.aws-partner__content h2 {
-  color: var(--color-white);
-  margin-bottom: 12px;
-}
-
-.aws-partner__content p {
-  max-width: 520px;
-  font-size: 0.95rem;
-}
-
-.aws-partner__certs {
+.aws-expertise__certs {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-top: 20px;
+  justify-content: center;
+  gap: 12px;
 }
 
 .aws-cert-badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 5px 12px;
-  border-radius: var(--radius-sm);
-  font-size: 0.78rem;
-  font-family: var(--font-mono);
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
   color: var(--color-aws);
   background: rgba(255, 153, 0, 0.08);
-  border: 1px solid rgba(255, 153, 0, 0.25);
+  border: 1px solid rgba(255, 153, 0, 0.2);
+  transition: all var(--transition-base);
 }
 
-@media (max-width: 640px) {
-  .aws-partner__inner { flex-direction: column; align-items: flex-start; gap: 24px; }
-  .aws-partner__badge { width: 80px; height: 80px; }
-  .aws-partner__badge-logo { font-size: 1.2rem; }
+.aws-cert-badge:hover {
+  background: rgba(255, 153, 0, 0.12);
+  border-color: rgba(255, 153, 0, 0.35);
+}
+
+.aws-cert-badge svg {
+  flex-shrink: 0;
 }
 
 /* ============================================================
@@ -741,6 +722,7 @@ a.nav__dropdown-item:hover,
   font-weight: 700;
   letter-spacing: 0.1em;
   margin-bottom: 16px;
+  opacity: 0.6;
 }
 
 .why__item-title {
@@ -827,10 +809,10 @@ a.nav__dropdown-item:hover,
    ============================================================ */
 .cta-final {
   background: linear-gradient(135deg, #1a0f2e 0%, #0d1117 100%);
-  border-top: 1px solid rgba(138, 101, 232, 0.2);
-  border-bottom: 1px solid rgba(138, 101, 232, 0.2);
+  border-top: 1px solid rgba(138, 101, 232, 0.15);
+  border-bottom: 1px solid rgba(138, 101, 232, 0.15);
   text-align: center;
-  padding: 96px 0;
+  padding: 100px 0;
   position: relative;
   overflow: hidden;
 }
@@ -871,13 +853,13 @@ a.nav__dropdown-item:hover,
 .footer {
   background: #07090f;
   padding: 60px 0 32px;
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(138, 101, 232, 0.1);
 }
 
 .footer__inner {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1fr;
-  gap: 40px;
+  gap: 48px;
   margin-bottom: 48px;
 }
 
@@ -1481,4 +1463,155 @@ a.nav__dropdown-item:hover,
 @media (max-width: 640px) {
   .values__grid { grid-template-columns: repeat(2, 1fr); }
   .certs-grid { grid-template-columns: 1fr; max-width: 100%; }
+}
+
+/* ============================================================
+   SCROLL ANIMATIONS
+   ============================================================ */
+.fade-in-on-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Stagger delays for grouped elements */
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+.stagger-6 { transition-delay: 0.6s; }
+
+/* Hero-specific animations */
+.hero__content {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: opacity 0.7s ease 0.2s, transform 0.7s ease 0.2s;
+}
+
+.hero__content.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.hero__visual {
+  opacity: 0;
+  transition: opacity 0.6s ease 0.4s;
+}
+
+.hero__visual.visible {
+  opacity: 1;
+}
+
+/* Button pulse animation for CTA */
+@keyframes subtle-pulse {
+  0%, 100% { box-shadow: 0 8px 24px rgba(138, 101, 232, 0.25); }
+  50% { box-shadow: 0 8px 32px rgba(138, 101, 232, 0.4); }
+}
+
+.btn--pulse {
+  animation: subtle-pulse 3s ease-in-out infinite;
+}
+
+/* ============================================================
+   EXPERTISE SECTION (replaces Team Cards)
+   ============================================================ */
+.expertise {
+  text-align: center;
+}
+
+.expertise__metrics {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  padding: 48px 40px;
+  background: rgba(138, 101, 232, 0.05);
+  border: 1px solid rgba(138, 101, 232, 0.15);
+  border-radius: 16px;
+  margin-bottom: 32px;
+}
+
+.expertise__metric {
+  text-align: center;
+}
+
+.expertise__metric-value {
+  font-size: 2.75rem;
+  font-weight: 800;
+  color: var(--color-purple-bright);
+  font-family: var(--font-brand);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.expertise__metric-label {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.expertise__specialties {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.expertise__specialty {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: rgba(138, 101, 232, 0.08);
+  border: 1px solid rgba(138, 101, 232, 0.2);
+  border-radius: 8px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--color-purple-bright);
+  transition: all var(--transition-base);
+}
+
+.expertise__specialty:hover {
+  background: rgba(138, 101, 232, 0.12);
+  border-color: rgba(138, 101, 232, 0.35);
+}
+
+.expertise__specialty svg {
+  width: 18px;
+  height: 18px;
+  stroke-width: 1.5;
+}
+
+@media (max-width: 900px) {
+  .expertise__metrics {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 640px) {
+  .expertise__metrics {
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    padding: 28px 20px;
+  }
+
+  .expertise__metric-value {
+    font-size: 2.25rem;
+  }
+
+  .expertise__specialties {
+    gap: 8px;
+  }
+
+  .expertise__specialty {
+    padding: 8px 14px;
+    font-size: 0.82rem;
+  }
 }

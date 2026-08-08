@@ -19,7 +19,7 @@ const translations = {
     'hero.badge': '● Cloud Consulting LATAM',
     'hero.title': 'Cloud That Scales',
     'hero.subtitle': 'Tu infraestructura AWS, diseñada para crecer.',
-    'hero.desc': 'Tu socio estratégico en AWS para Latinoamérica. Diseñamos, migramos y optimizamos con precisión técnica.',
+    'hero.desc': 'Diseñamos, migramos y optimizamos tu AWS.',
     'hero.cta1': 'Agenda una consulta →',
     'hero.cta2': 'Ver servicios',
     'stats.engineers_label': 'Ingenieros AWS',
@@ -57,19 +57,25 @@ const translations = {
     'services.s6.desc': 'SageMaker, Bedrock y GenAI integrations para escalar con IA.',
     'services.learn_more': 'Ver más →',
     'services.coming_soon': 'Próximamente',
-    'partner.title': 'Respaldados por Amazon Web Services',
-    'partner.desc': 'Nuestro equipo cuenta con certificaciones AWS en Solutions Architecture, DevOps Engineer, Security Specialty y Networking — las especialidades más demandadas en proyectos cloud enterprise.',
+    'aws.title': 'Especialistas AWS Certificados',
+    'aws.subtitle': 'Nuestro equipo cuenta con certificaciones en las especialidades más demandadas.',
     'why.title': '¿Por qué Zervonix?',
     'why.1.title': 'AWS Puro',
-    'why.1.desc': 'No somos multi-cloud genérico. Toda nuestra expertise es AWS — más profundidad, mejores resultados.',
+    'why.1.desc': '100% AWS. Más profundidad, mejores resultados.',
     'why.2.title': 'LATAM Nativo',
-    'why.2.desc': 'Entendemos el contexto regulatorio y de negocio de la región. Hablamos tu idioma y tu realidad.',
+    'why.2.desc': 'Tu contexto, tu idioma, tu realidad.',
     'why.3.title': 'Resultados medibles',
-    'why.3.desc': 'Cada proyecto tiene métricas claras de éxito desde el día uno. Sin sorpresas, sin promesas vacías.',
+    'why.3.desc': 'Métricas claras desde el día uno.',
+    'expertise.title': 'Nuestro Expertise',
+    'expertise.subtitle': 'Un equipo de ingenieros certificados AWS con experiencia en proyectos enterprise.',
+    'expertise.engineers': 'Ingenieros AWS',
+    'expertise.years': 'Años combinados',
+    'expertise.projects': 'Proyectos entregados',
+    'expertise.certs': 'Certificaciones AWS',
     'team.title': 'Nuestro equipo',
     'team.subtitle': 'Ingenieros certificados AWS con experiencia en proyectos enterprise para Latinoamérica.',
     'cta.title': '¿Listo para transformar tu infraestructura?',
-    'cta.subtitle': 'Hablemos de tu proyecto. Primera consulta sin costo.',
+    'cta.subtitle': 'Primera consulta sin costo.',
     'cta.btn': 'Agenda tu consulta gratuita →',
     'footer.tagline': 'Cloud Consulting LATAM',
     'footer.services_col': 'Servicios',
@@ -150,7 +156,7 @@ const translations = {
     'hero.badge': '● Cloud Consulting LATAM',
     'hero.title': 'Cloud That Scales',
     'hero.subtitle': 'Your AWS infrastructure, built to grow.',
-    'hero.desc': 'Your strategic AWS partner for Latin America. We design, migrate and optimize with technical precision.',
+    'hero.desc': 'We design, migrate, and optimize your AWS.',
     'hero.cta1': 'Book a consultation →',
     'hero.cta2': 'View services',
     'stats.engineers_label': 'AWS Engineers',
@@ -188,19 +194,25 @@ const translations = {
     'services.s6.desc': 'SageMaker, Bedrock and GenAI integrations to scale with AI.',
     'services.learn_more': 'Learn more →',
     'services.coming_soon': 'Coming soon',
-    'partner.title': 'Backed by Amazon Web Services',
-    'partner.desc': 'Our team holds AWS certifications in Solutions Architecture, DevOps Engineer, Security Specialty and Networking — the most in-demand specialties for enterprise cloud projects.',
+    'aws.title': 'Certified AWS Specialists',
+    'aws.subtitle': 'Our team holds certifications in the most in-demand specialties.',
     'why.title': 'Why Zervonix?',
     'why.1.title': 'Pure AWS',
-    'why.1.desc': "We're not generic multi-cloud. Our entire expertise is AWS — more depth, better results.",
+    'why.1.desc': '100% AWS. More depth, better results.',
     'why.2.title': 'LATAM Native',
-    'why.2.desc': 'We understand the regulatory and business context of the region. We speak your language and your reality.',
+    'why.2.desc': 'Your context, your language, your reality.',
     'why.3.title': 'Measurable results',
-    'why.3.desc': 'Every project has clear success metrics from day one. No surprises, no empty promises.',
+    'why.3.desc': 'Clear metrics from day one.',
+    'expertise.title': 'Our Expertise',
+    'expertise.subtitle': 'A team of certified AWS engineers with enterprise project experience.',
+    'expertise.engineers': 'AWS Engineers',
+    'expertise.years': 'Combined Years',
+    'expertise.projects': 'Projects Delivered',
+    'expertise.certs': 'AWS Certifications',
     'team.title': 'Our team',
     'team.subtitle': 'AWS-certified engineers with real enterprise experience across Latin America.',
     'cta.title': 'Ready to transform your infrastructure?',
-    'cta.subtitle': "Let's talk about your project. First consultation is free.",
+    'cta.subtitle': "Free first consultation.",
     'cta.btn': 'Book your free consultation →',
     'footer.tagline': 'Cloud Consulting LATAM',
     'footer.services_col': 'Services',
@@ -419,6 +431,120 @@ function initContactForm() {
     }, 800);
   });
 }
+
+// ============================================================
+// LUCIDE ICONS (SVG inline)
+// ============================================================
+const LUCIDE_ICONS = {
+  'cloud-upload': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg>',
+
+  'git-branch': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>',
+
+  'trending-down': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>',
+
+  'shield-check': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>',
+
+  'git-merge': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg>',
+
+  'brain': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>',
+
+  'cloud': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>',
+
+  'network': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>',
+
+  'arrow-right': '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>'
+};
+
+// Helper function to get icon
+function getLucideIcon(name, size = 24) {
+  const icon = LUCIDE_ICONS[name];
+  if (!icon) return '';
+  return icon.replace(/width="24"/g, `width="${size}"`).replace(/height="24"/g, `height="${size}"`);
+}
+
+// ============================================================
+// SCROLL ANIMATIONS
+// ============================================================
+function initScrollAnimations() {
+  const elements = document.querySelectorAll('.fade-in-on-scroll, .hero__content, .hero__visual');
+
+  if (!elements.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  });
+
+  elements.forEach(el => observer.observe(el));
+}
+
+// Initialize on DOM ready
+document.addEventListener('DOMContentLoaded', initScrollAnimations);
+
+// ============================================================
+// COUNTER ANIMATIONS
+// ============================================================
+function animateCounter(element, target, duration = 1500) {
+  const startTime = performance.now();
+  const isPlus = target.toString().includes('+');
+  const isPercent = target.toString().includes('%') || parseInt(target) === 100;
+  const numericTarget = parseInt(target.toString().replace(/[^0-9]/g, ''));
+
+  function easeOutQuart(t) {
+    return 1 - Math.pow(1 - t, 4);
+  }
+
+  function update(currentTime) {
+    const elapsed = currentTime - startTime;
+    const progress = Math.min(elapsed / duration, 1);
+    const easedProgress = easeOutQuart(progress);
+    const current = Math.round(easedProgress * numericTarget);
+
+    let suffix = '';
+    if (isPlus) suffix = '+';
+    if (isPercent) suffix = '%';
+
+    element.textContent = current + suffix;
+
+    if (progress < 1) {
+      requestAnimationFrame(update);
+    }
+  }
+
+  requestAnimationFrame(update);
+}
+
+function initCounterAnimations() {
+  const counters = document.querySelectorAll('[data-counter]');
+
+  if (!counters.length) return;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const target = entry.target.getAttribute('data-counter');
+        animateCounter(entry.target, target);
+        observer.unobserve(entry.target);
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  counters.forEach(el => {
+    el.textContent = '0';
+    observer.observe(el);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', initCounterAnimations);
 
 // ============================================================
 // INIT

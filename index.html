@@ -77,11 +77,11 @@
       <div class="hero__content">
         <div class="hero__brand-row">
           <img src="assets/logo-mark.png" alt="Zervonix" class="hero__isotipo">
-          <span class="badge" data-i18n="hero.badge">● Cloud Consulting LATAM</span>
+          <span class="badge badge--minimal" data-i18n="hero.badge">● Cloud Consulting LATAM</span>
         </div>
         <h1 class="hero__title" data-i18n="hero.title">Cloud That Scales</h1>
         <p class="hero__subtitle" data-i18n="hero.subtitle">Tu infraestructura AWS, diseñada para crecer.</p>
-        <p class="hero__desc" data-i18n="hero.desc">Tu socio estratégico en AWS para Latinoamérica. Diseñamos, migramos y optimizamos con precisión técnica.</p>
+        <p class="hero__desc" data-i18n="hero.desc">Diseñamos, migramos y optimizamos tu AWS.</p>
         <div class="hero__actions">
           <a href="contacto.html" class="btn btn--primary btn--large" data-i18n="hero.cta1">Agenda una consulta →</a>
           <a href="#servicios" class="btn btn--outline btn--large" data-i18n="hero.cta2">Ver servicios</a>
@@ -105,7 +105,7 @@
               <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
             </filter>
             <radialGradient id="bg-aura" cx="50%" cy="50%" r="50%">
-              <stop offset="0%" stop-color="#8A65E8" stop-opacity="0.18"/>
+              <stop offset="0%" stop-color="#8A65E8" stop-opacity="0.10"/>
               <stop offset="100%" stop-color="#8A65E8" stop-opacity="0"/>
             </radialGradient>
             <radialGradient id="node-fill" cx="30%" cy="25%" r="75%">
@@ -245,15 +245,15 @@
   <div class="container">
     <div class="stats-bar__grid">
       <div class="stats-bar__item">
-        <div class="stats-bar__value">5</div>
+        <div class="stats-bar__value" data-counter="5">5</div>
         <div class="stats-bar__label" data-i18n="stats.engineers_label">Ingenieros AWS</div>
       </div>
       <div class="stats-bar__item">
-        <div class="stats-bar__value">4+</div>
+        <div class="stats-bar__value" data-counter="4+">4+</div>
         <div class="stats-bar__label" data-i18n="stats.specs_label">Especialidades AWS</div>
       </div>
       <div class="stats-bar__item">
-        <div class="stats-bar__value">100%</div>
+        <div class="stats-bar__value" data-counter="100">100%</div>
         <div class="stats-bar__label" data-i18n="stats.focus_label">AWS Focus</div>
       </div>
       <div class="stats-bar__item">
@@ -273,27 +273,39 @@
     </div>
     <div class="challenge__grid" role="group" aria-label="Selecciona tu desafío">
       <div class="challenge__option" data-index="1" role="button" tabindex="0">
-        <span class="challenge__option-icon" aria-hidden="true">☁️</span>
+        <span class="challenge__option-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg>
+        </span>
         <span data-i18n="challenge.opt1">Migrar mi infraestructura a AWS</span>
       </div>
       <div class="challenge__option" data-index="2" role="button" tabindex="0">
-        <span class="challenge__option-icon" aria-hidden="true">📐</span>
+        <span class="challenge__option-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+        </span>
         <span data-i18n="challenge.opt2">Diseñar una arquitectura escalable</span>
       </div>
       <div class="challenge__option" data-index="3" role="button" tabindex="0">
-        <span class="challenge__option-icon" aria-hidden="true">💰</span>
+        <span class="challenge__option-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+        </span>
         <span data-i18n="challenge.opt3">Reducir costos en cloud</span>
       </div>
       <div class="challenge__option" data-index="4" role="button" tabindex="0">
-        <span class="challenge__option-icon" aria-hidden="true">🔒</span>
+        <span class="challenge__option-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+        </span>
         <span data-i18n="challenge.opt4">Fortalecer la seguridad de mi infraestructura</span>
       </div>
       <div class="challenge__option" data-index="5" role="button" tabindex="0">
-        <span class="challenge__option-icon" aria-hidden="true">⚙️</span>
+        <span class="challenge__option-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg>
+        </span>
         <span data-i18n="challenge.opt5">Implementar DevOps y automatización</span>
       </div>
       <div class="challenge__option" data-index="6" role="button" tabindex="0">
-        <span class="challenge__option-icon" aria-hidden="true">🤖</span>
+        <span class="challenge__option-icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+        </span>
         <span data-i18n="challenge.opt6">Integrar AI/ML en mis procesos</span>
       </div>
     </div>
@@ -312,37 +324,52 @@
     </div>
     <div class="services__grid">
       <div class="service-card">
-        <div class="service-card__icon" aria-hidden="true">🚀</div>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14.899A7 7 0 1 1 15.71 8h1.79a4.5 4.5 0 0 1 2.5 8.242"/><path d="M12 12v9"/><path d="m16 16-4-4-4 4"/></svg>
+        </div>
         <h3 class="service-card__title" data-i18n="services.s1.name">Migración AWS</h3>
         <p class="service-card__desc" data-i18n="services.s1.desc">Lift &amp; shift, re-platforming y re-architecting con mínimo riesgo.</p>
-        <a href="servicios/aws-migration.html" class="service-card__link" data-i18n="services.learn_more">Ver más →</a>
+        <a href="servicios/aws-migration.html" class="service-card__link">
+          <span data-i18n="services.learn_more">Ver más</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
       </div>
       <div class="service-card service-card--coming-soon">
-        <div class="service-card__icon" aria-hidden="true">📐</div>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="6" x2="6" y1="3" y2="15"/><circle cx="18" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M18 9a9 9 0 0 1-9 9"/></svg>
+        </div>
         <h3 class="service-card__title" data-i18n="services.s2.name">Arquitectura Cloud</h3>
         <p class="service-card__desc" data-i18n="services.s2.desc">Well-Architected Framework, diseño escalable y resiliente.</p>
         <span class="service-card__link" data-i18n="services.coming_soon">Próximamente</span>
       </div>
       <div class="service-card service-card--coming-soon">
-        <div class="service-card__icon" aria-hidden="true">💰</div>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 17 13.5 8.5 8.5 13.5 2 7"/><polyline points="16 17 22 17 22 11"/></svg>
+        </div>
         <h3 class="service-card__title" data-i18n="services.s3.name">Optimización de Costos</h3>
         <p class="service-card__desc" data-i18n="services.s3.desc">FinOps, rightsizing y Reserved Instances para reducir tu gasto.</p>
         <span class="service-card__link" data-i18n="services.coming_soon">Próximamente</span>
       </div>
       <div class="service-card service-card--coming-soon">
-        <div class="service-card__icon" aria-hidden="true">🔒</div>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+        </div>
         <h3 class="service-card__title" data-i18n="services.s4.name">Seguridad Cloud</h3>
         <p class="service-card__desc" data-i18n="services.s4.desc">IAM, compliance, threat detection y respuesta a incidentes.</p>
         <span class="service-card__link" data-i18n="services.coming_soon">Próximamente</span>
       </div>
       <div class="service-card service-card--coming-soon">
-        <div class="service-card__icon" aria-hidden="true">⚙️</div>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg>
+        </div>
         <h3 class="service-card__title" data-i18n="services.s5.name">DevOps &amp; CI/CD</h3>
         <p class="service-card__desc" data-i18n="services.s5.desc">Pipelines, IaC con Terraform/CDK, Kubernetes y monitoreo.</p>
         <span class="service-card__link" data-i18n="services.coming_soon">Próximamente</span>
       </div>
       <div class="service-card service-card--coming-soon">
-        <div class="service-card__icon" aria-hidden="true">🤖</div>
+        <div class="service-card__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+        </div>
         <h3 class="service-card__title" data-i18n="services.s6.name">AI / ML en AWS</h3>
         <p class="service-card__desc" data-i18n="services.s6.desc">SageMaker, Bedrock y GenAI integrations para escalar con IA.</p>
         <span class="service-card__link" data-i18n="services.coming_soon">Próximamente</span>
@@ -351,24 +378,30 @@
   </div>
 </section>
 
-<!-- ============ AWS PARTNER ============ -->
-<section class="section aws-partner">
+<!-- ============ AWS EXPERTISE ============ -->
+<section class="section aws-expertise">
   <div class="container">
-    <div class="aws-partner__inner">
-      <div class="aws-partner__badge" aria-label="AWS Cloud Partner">
-        <div class="aws-partner__badge-logo">AWS</div>
-        <div class="aws-partner__badge-sub">Cloud<br>Partner</div>
-      </div>
-      <div class="aws-partner__content">
-        <h2 data-i18n="partner.title">Respaldados por Amazon Web Services</h2>
-        <p data-i18n="partner.desc">Nuestro equipo cuenta con certificaciones AWS en Solutions Architecture, DevOps Engineer, Security Specialty y Networking — las especialidades más demandadas en proyectos cloud enterprise.</p>
-        <div class="aws-partner__certs">
-          <span class="aws-cert-badge">☁ Solutions Architect</span>
-          <span class="aws-cert-badge">⚙ DevOps Engineer</span>
-          <span class="aws-cert-badge">🔒 Security Specialty</span>
-          <span class="aws-cert-badge">🌐 Networking</span>
-        </div>
-      </div>
+    <div class="section__header">
+      <h2 class="section__title" data-i18n="aws.title">Especialistas AWS Certificados</h2>
+      <p class="section__subtitle" data-i18n="aws.subtitle">Nuestro equipo cuenta con certificaciones en las especialidades más demandadas.</p>
+    </div>
+    <div class="aws-expertise__certs">
+      <span class="aws-cert-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+        Solutions Architect
+      </span>
+      <span class="aws-cert-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg>
+        DevOps Engineer
+      </span>
+      <span class="aws-cert-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+        Security Specialty
+      </span>
+      <span class="aws-cert-badge">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+        Networking
+      </span>
     </div>
   </div>
 </section>
@@ -399,41 +432,51 @@
   </div>
 </section>
 
-<!-- ============ TEAM ============ -->
+<!-- ============ EXPERTISE ============ -->
 <section class="section">
   <div class="container">
     <div class="section__header">
-      <h2 class="section__title" data-i18n="team.title">Nuestro equipo</h2>
-      <p class="section__subtitle" data-i18n="team.subtitle">Ingenieros certificados AWS con experiencia en proyectos enterprise para Latinoamérica.</p>
+      <h2 class="section__title" data-i18n="expertise.title">Nuestro Expertise</h2>
+      <p class="section__subtitle" data-i18n="expertise.subtitle">Un equipo de ingenieros certificados AWS con experiencia en proyectos enterprise.</p>
     </div>
-    <div class="team__grid">
-      <div class="team-card">
-        <div class="team-card__avatar" aria-hidden="true">A</div>
-        <div class="team-card__name">Ingeniero 1</div>
-        <div class="team-card__role">AWS Solutions<br>Architect</div>
+    <div class="expertise">
+      <div class="expertise__metrics fade-in-on-scroll">
+        <div class="expertise__metric">
+          <div class="expertise__metric-value" data-counter="5">5</div>
+          <div class="expertise__metric-label" data-i18n="expertise.engineers">Ingenieros AWS</div>
+        </div>
+        <div class="expertise__metric">
+          <div class="expertise__metric-value" data-counter="15+">15+</div>
+          <div class="expertise__metric-label" data-i18n="expertise.years">Años combinados</div>
+        </div>
+        <div class="expertise__metric">
+          <div class="expertise__metric-value" data-counter="20+">20+</div>
+          <div class="expertise__metric-label" data-i18n="expertise.projects">Proyectos entregados</div>
+        </div>
+        <div class="expertise__metric">
+          <div class="expertise__metric-value" data-counter="4">4</div>
+          <div class="expertise__metric-label" data-i18n="expertise.certs">Certificaciones AWS</div>
+        </div>
       </div>
-      <div class="team-card">
-        <div class="team-card__avatar" aria-hidden="true">B</div>
-        <div class="team-card__name">Ingeniero 2</div>
-        <div class="team-card__role">AWS DevOps<br>Engineer</div>
-      </div>
-      <div class="team-card">
-        <div class="team-card__avatar" aria-hidden="true">C</div>
-        <div class="team-card__name">Ingeniero 3</div>
-        <div class="team-card__role">AWS Security<br>Specialty</div>
-      </div>
-      <div class="team-card">
-        <div class="team-card__avatar" aria-hidden="true">D</div>
-        <div class="team-card__name">Ingeniero 4</div>
-        <div class="team-card__role">AWS Networking<br>Specialty</div>
-      </div>
-      <div class="team-card">
-        <div class="team-card__avatar" aria-hidden="true">E</div>
-        <div class="team-card__name">Ingeniero 5</div>
-        <div class="team-card__role">AWS Solutions<br>Architect</div>
+      <div class="expertise__specialties fade-in-on-scroll">
+        <span class="expertise__specialty">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+          Solutions Architecture
+        </span>
+        <span class="expertise__specialty">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M6 21V9a9 9 0 0 0 9 9"/></svg>
+          DevOps Engineering
+        </span>
+        <span class="expertise__specialty">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/><path d="m9 12 2 2 4-4"/></svg>
+          Security Specialty
+        </span>
+        <span class="expertise__specialty">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="16" y="16" width="6" height="6" rx="1"/><rect x="2" y="16" width="6" height="6" rx="1"/><rect x="9" y="2" width="6" height="6" rx="1"/><path d="M5 16v-3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1v3"/><path d="M12 12V8"/></svg>
+          Networking Specialty
+        </span>
       </div>
     </div>
-    <p style="text-align:center;margin-top:28px;font-size:0.82rem;color:var(--color-text-muted)">Nombres y fotos reales se agregan antes del lanzamiento.</p>
   </div>
 </section>
 
@@ -442,7 +485,7 @@
   <div class="container">
     <h2 class="cta-final__title" data-i18n="cta.title">¿Listo para transformar tu infraestructura?</h2>
     <p class="cta-final__subtitle" data-i18n="cta.subtitle">Hablemos de tu proyecto. Primera consulta sin costo.</p>
-    <a href="contacto.html" class="btn btn--primary btn--large" data-i18n="cta.btn">Agenda tu consulta gratuita →</a>
+    <a href="contacto.html" class="btn btn--primary btn--large btn--pulse" data-i18n="cta.btn">Agenda tu consulta gratuita →</a>
   </div>
 </section>
 
