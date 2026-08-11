@@ -1,0 +1,607 @@
+/* ============================================
+   CYGMA LANDING PAGE STYLES
+   Zervonix AWS Intelligence Platform
+   ============================================ */
+
+/* ============ HERO ============ */
+.cygma-hero {
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 120px 0 80px;
+  background: radial-gradient(ellipse 80% 60% at 50% 0%, rgba(138, 101, 232, 0.12) 0%, transparent 60%);
+}
+
+.cygma-hero .container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cygma-hero__badge {
+  margin-bottom: 24px;
+}
+
+.cygma-hero__title {
+  font-family: var(--font-brand);
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 800;
+  line-height: 1.1;
+  color: var(--color-white);
+  margin-bottom: 24px;
+}
+
+.cygma-hero__subtitle {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--color-gray);
+  margin-bottom: 32px;
+  max-width: 540px;
+}
+
+.cygma-hero__actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.cygma-hero__trust {
+  font-size: 0.875rem;
+  color: var(--color-gray);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cygma-hero__trust::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.cygma-hero__visual {
+  display: flex;
+  justify-content: center;
+}
+
+/* ============ SCREENSHOT PLACEHOLDERS ============ */
+.cygma-screenshot {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  position: relative;
+}
+
+.cygma-screenshot--hero {
+  width: 100%;
+  aspect-ratio: 16/10;
+  max-width: 600px;
+  box-shadow:
+    0 0 0 1px rgba(138, 101, 232, 0.2),
+    0 20px 60px -20px rgba(0, 0, 0, 0.5);
+}
+
+.cygma-screenshot--large {
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-width: 1000px;
+  margin: 0 auto;
+  box-shadow:
+    0 0 0 1px rgba(138, 101, 232, 0.2),
+    0 40px 80px -30px rgba(0, 0, 0, 0.5);
+}
+
+.cygma-screenshot__placeholder {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-gray);
+  font-size: 0.875rem;
+  background:
+    linear-gradient(135deg, rgba(138, 101, 232, 0.05) 0%, transparent 50%),
+    repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 20px,
+      rgba(138, 101, 232, 0.03) 20px,
+      rgba(138, 101, 232, 0.03) 21px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 20px,
+      rgba(138, 101, 232, 0.03) 20px,
+      rgba(138, 101, 232, 0.03) 21px
+    );
+}
+
+/* ============ PROBLEM SECTION ============ */
+.cygma-problem__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.cygma-problem__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+
+.cygma-problem__card:hover {
+  border-color: rgba(138, 101, 232, 0.4);
+  transform: translateY(-2px);
+}
+
+.cygma-problem__icon {
+  width: 48px;
+  height: 48px;
+  background: rgba(138, 101, 232, 0.1);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--color-purple-bright);
+}
+
+.cygma-problem__card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.cygma-problem__card p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-gray);
+}
+
+/* ============ PLATFORM SECTION ============ */
+.cygma-platform__showcase {
+  margin-top: 48px;
+}
+
+/* ============ CAPABILITIES SECTION ============ */
+.cygma-capabilities__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.cygma-capability {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.cygma-capability:hover {
+  border-color: rgba(138, 101, 232, 0.4);
+  box-shadow: 0 8px 32px -8px rgba(138, 101, 232, 0.15);
+}
+
+.cygma-capability__icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, rgba(138, 101, 232, 0.15) 0%, rgba(138, 101, 232, 0.05) 100%);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  color: var(--color-purple-bright);
+}
+
+.cygma-capability h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.cygma-capability p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-gray);
+}
+
+/* ============ HOW IT WORKS ============ */
+.cygma-how__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin-top: 48px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cygma-how__step {
+  display: flex;
+  gap: 24px;
+  padding: 32px 0;
+  position: relative;
+}
+
+.cygma-how__step:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 80px;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(180deg, var(--color-purple) 0%, transparent 100%);
+}
+
+.cygma-how__number {
+  width: 48px;
+  height: 48px;
+  min-width: 48px;
+  background: var(--color-purple);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-brand);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-white);
+}
+
+.cygma-how__content h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+.cygma-how__content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-gray);
+}
+
+/* ============ SECURITY / FINOPS SECTIONS ============ */
+.cygma-security__inner,
+.cygma-finops__inner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.cygma-security__content h2,
+.cygma-finops__content h2 {
+  font-family: var(--font-brand);
+  font-size: clamp(1.75rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: var(--color-white);
+  margin: 16px 0 24px;
+  line-height: 1.2;
+}
+
+.cygma-security__list,
+.cygma-finops__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px 0;
+}
+
+.cygma-security__list li,
+.cygma-finops__list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  color: var(--color-gray);
+  line-height: 1.5;
+}
+
+.cygma-security__list li::before,
+.cygma-finops__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  background: var(--color-purple);
+  border-radius: 50%;
+}
+
+.cygma-security__visual .cygma-screenshot,
+.cygma-finops__visual .cygma-screenshot {
+  aspect-ratio: 4/3;
+}
+
+/* ============ NETWORK SECTION ============ */
+.cygma-network__showcase {
+  margin-top: 48px;
+}
+
+/* ============ PRICING ============ */
+.cygma-pricing__promo {
+  background: linear-gradient(135deg, rgba(138, 101, 232, 0.15) 0%, rgba(138, 101, 232, 0.05) 100%);
+  border: 1px solid rgba(138, 101, 232, 0.3);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  margin-bottom: 48px;
+  text-align: center;
+}
+
+.cygma-pricing__promo h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin: 12px 0 8px;
+}
+
+.cygma-pricing__promo p {
+  color: var(--color-gray);
+  font-size: 1rem;
+}
+
+.cygma-pricing__promo strong {
+  color: var(--color-purple-bright);
+}
+
+.cygma-pricing__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.cygma-pricing__card {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  padding: 32px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.cygma-pricing__card--featured {
+  border-color: var(--color-purple);
+  box-shadow: 0 0 40px -10px rgba(138, 101, 232, 0.3);
+}
+
+.cygma-pricing__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--color-purple);
+  color: var(--color-white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.cygma-pricing__header {
+  margin-bottom: 24px;
+}
+
+.cygma-pricing__name {
+  font-family: var(--font-brand);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  margin-bottom: 8px;
+}
+
+.cygma-pricing__desc {
+  font-size: 0.9rem;
+  color: var(--color-gray);
+}
+
+.cygma-pricing__price {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.cygma-pricing__amount {
+  font-family: var(--font-brand);
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-white);
+}
+
+.cygma-pricing__period {
+  font-size: 1rem;
+  color: var(--color-gray);
+}
+
+.cygma-pricing__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 auto 0;
+  flex: 1;
+}
+
+.cygma-pricing__features li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 12px;
+  font-size: 0.9rem;
+  color: var(--color-gray);
+}
+
+.cygma-pricing__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  width: 12px;
+  height: 12px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%238A65E8' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-size: contain;
+}
+
+.cygma-pricing__card .btn {
+  margin-top: 24px;
+}
+
+/* ============ FAQ ============ */
+.cygma-faq__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.cygma-faq__item {
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  padding: 28px;
+}
+
+.cygma-faq__item h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--color-white);
+  margin-bottom: 12px;
+}
+
+.cygma-faq__item p {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: var(--color-gray);
+}
+
+/* ============ FINAL CTA ============ */
+.cygma-cta {
+  background: linear-gradient(180deg, transparent 0%, rgba(138, 101, 232, 0.08) 100%);
+}
+
+.cygma-cta__inner {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+.cygma-cta__inner h2 {
+  font-family: var(--font-brand);
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  color: var(--color-white);
+  margin-bottom: 16px;
+}
+
+.cygma-cta__inner p {
+  font-size: 1.1rem;
+  color: var(--color-gray);
+  margin-bottom: 32px;
+}
+
+.cygma-cta__actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 1024px) {
+  .cygma-hero .container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+    text-align: center;
+  }
+
+  .cygma-hero__subtitle {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cygma-hero__actions {
+    justify-content: center;
+  }
+
+  .cygma-hero__trust {
+    justify-content: center;
+  }
+
+  .cygma-problem__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cygma-capabilities__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cygma-security__inner,
+  .cygma-finops__inner {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .cygma-finops__inner {
+    direction: ltr;
+  }
+
+  .cygma-finops__visual {
+    order: -1;
+  }
+
+  .cygma-pricing__grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .cygma-faq__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .cygma-hero {
+    min-height: auto;
+    padding: 100px 0 60px;
+  }
+
+  .cygma-problem__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cygma-capabilities__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cygma-hero__actions {
+    flex-direction: column;
+  }
+
+  .cygma-hero__actions .btn {
+    width: 100%;
+  }
+
+  .cygma-cta__actions {
+    flex-direction: column;
+  }
+
+  .cygma-cta__actions .btn {
+    width: 100%;
+  }
+}
