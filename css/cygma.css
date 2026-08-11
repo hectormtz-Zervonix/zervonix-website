@@ -168,6 +168,36 @@
   color: var(--color-gray);
 }
 
+.cygma-problem__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cygma-problem__list li {
+  position: relative;
+  padding-left: 16px;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--color-gray);
+}
+
+.cygma-problem__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 5px;
+  height: 5px;
+  background: var(--color-purple);
+  border-radius: 50%;
+}
+
+.cygma-problem__list li:last-child {
+  margin-bottom: 0;
+}
+
 /* ============ PLATFORM SECTION ============ */
 .cygma-platform__showcase {
   margin-top: 48px;
