@@ -444,16 +444,31 @@ function initNav() {
 
   const servicesBtn = document.getElementById('nav-services-btn');
   const servicesDropdown = servicesBtn && servicesBtn.closest('.nav__dropdown');
+  const productsBtn = document.getElementById('nav-products-btn');
+  const productsDropdown = productsBtn && productsBtn.closest('.nav__dropdown');
+
   if (servicesBtn && servicesDropdown) {
     servicesBtn.addEventListener('click', e => {
       e.stopPropagation();
+      if (productsDropdown) productsDropdown.classList.remove('open');
       servicesDropdown.classList.toggle('open');
-    });
-    document.addEventListener('click', () => {
-      servicesDropdown.classList.remove('open');
     });
     servicesDropdown.addEventListener('click', e => e.stopPropagation());
   }
+
+  if (productsBtn && productsDropdown) {
+    productsBtn.addEventListener('click', e => {
+      e.stopPropagation();
+      if (servicesDropdown) servicesDropdown.classList.remove('open');
+      productsDropdown.classList.toggle('open');
+    });
+    productsDropdown.addEventListener('click', e => e.stopPropagation());
+  }
+
+  document.addEventListener('click', () => {
+    if (servicesDropdown) servicesDropdown.classList.remove('open');
+    if (productsDropdown) productsDropdown.classList.remove('open');
+  });
 }
 
 // ============================================================
