@@ -79,6 +79,7 @@ const translations = {
     'cta.btn': 'Agenda tu consulta gratuita →',
     'footer.tagline': 'Cloud Consulting LATAM',
     'footer.services_col': 'Servicios',
+    'footer.products_col': 'Productos',
     'footer.company_col': 'Compañía',
     'footer.legal_col': 'Legal',
     'footer.about': 'Nosotros',
@@ -175,6 +176,9 @@ const translations = {
     'migration.aud3.desc': 'Ya en AWS pero con arquitecturas legacy que necesitan modernización y optimización.',
     'migration.aud4.title': 'Proyectos con requisitos de compliance',
     'migration.aud4.desc': 'Industrias reguladas (finanzas, salud) que necesitan cumplir SOC 2, ISO 27001 o similares en AWS.',
+    'cygma.hero.title': 'Proximamente',
+    'cygma.hero.subtitle': 'Estamos trabajando en algo nuevo. Pronto te contaremos mas.',
+    'cygma.hero.cta': 'Contactanos para saber mas',
   },
   en: {
     'nav.services': 'Services',
@@ -251,6 +255,7 @@ const translations = {
     'cta.btn': 'Book your free consultation →',
     'footer.tagline': 'Cloud Consulting LATAM',
     'footer.services_col': 'Services',
+    'footer.products_col': 'Products',
     'footer.company_col': 'Company',
     'footer.legal_col': 'Legal',
     'footer.about': 'About',
@@ -347,6 +352,9 @@ const translations = {
     'migration.aud3.desc': 'Already on AWS but with legacy architectures that need modernization and optimization.',
     'migration.aud4.title': 'Projects with compliance requirements',
     'migration.aud4.desc': 'Regulated industries (finance, healthcare) that need to meet SOC 2, ISO 27001 or similar on AWS.',
+    'cygma.hero.title': 'Coming Soon',
+    'cygma.hero.subtitle': 'We are working on something new. We will tell you more soon.',
+    'cygma.hero.cta': 'Contact us to learn more',
   }
 };
 
