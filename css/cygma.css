@@ -385,8 +385,9 @@
   font-size: 1rem;
 }
 
-.cygma-pricing__promo strong {
+.cygma-pricing__promo-price {
   color: var(--color-purple-bright);
+  font-weight: 700;
 }
 
 .cygma-pricing__grid {
