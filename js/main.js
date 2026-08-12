@@ -773,26 +773,44 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
+  const RECAPTCHA_SITE_KEY = '6Le_hYEtAAAAALOZOR3ggVcDtzaizFCmctTYoR2l';
+
   form.addEventListener('submit', function(e) {
-    const recaptchaResponse = document.querySelector('.g-recaptcha-response');
-    const recaptchaError = document.getElementById('recaptcha-error');
+    e.preventDefault();
 
-    if (recaptchaResponse && recaptchaResponse.value === '') {
-      e.preventDefault();
-      if (recaptchaError) recaptchaError.style.display = 'block';
-      return false;
+    // Check if grecaptcha is available (v3)
+    if (typeof grecaptcha !== 'undefined') {
+      grecaptcha.ready(function() {
+        grecaptcha.execute(RECAPTCHA_SITE_KEY, { action: 'contact_submit' })
+          .then(function(token) {
+            // Set the token in the hidden field
+            const tokenField = document.getElementById('g-recaptcha-response');
+            if (tokenField) tokenField.value = token;
+
+            // Submit the form
+            form.submit();
+
+            // Show success message after a delay
+            setTimeout(() => {
+              const successEl = document.getElementById('form-success');
+              if (successEl) {
+                successEl.style.display = 'block';
+                form.reset();
+              }
+            }, 800);
+          });
+      });
+    } else {
+      // If reCAPTCHA not loaded, submit anyway
+      form.submit();
+      setTimeout(() => {
+        const successEl = document.getElementById('form-success');
+        if (successEl) {
+          successEl.style.display = 'block';
+          form.reset();
+        }
+      }, 800);
     }
-
-    if (recaptchaError) recaptchaError.style.display = 'none';
-
-    setTimeout(() => {
-      const successEl = document.getElementById('form-success');
-      if (successEl) {
-        successEl.style.display = 'block';
-        form.reset();
-        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
-      }
-    }, 800);
   });
 }
 

@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="stylesheet" href="css/components.css">
-  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://www.google.com/recaptcha/api.js?render=6Le_hYEtAAAAALOZOR3ggVcDtzaizFCmctTYoR2l"></script>
 </head>
 <body>
 
@@ -160,10 +160,7 @@
                 placeholder="Cuéntanos sobre tu proyecto"
               ></textarea>
             </div>
-            <div class="form-group">
-              <div class="g-recaptcha" data-sitekey="6Le_hYEtAAAAALOZOR3ggVcDtzaizFCmctTYoR2l" data-theme="dark"></div>
-              <div id="recaptcha-error" class="form-error" style="display:none" data-i18n="contact.form.recaptcha_error">Por favor, verifica que no eres un robot.</div>
-            </div>
+            <input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
             <button type="submit" class="btn btn--primary form-submit" data-i18n="contact.form.submit">
               Enviar mensaje →
             </button>
