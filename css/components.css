@@ -1329,6 +1329,16 @@ a.nav__dropdown-item:hover,
   margin-top: 4px;
 }
 
+.form-error {
+  color: #ef4444;
+  font-size: 0.875rem;
+  margin-top: 8px;
+}
+
+.g-recaptcha {
+  margin-bottom: 8px;
+}
+
 .form-success {
   display: none;
   text-align: center;

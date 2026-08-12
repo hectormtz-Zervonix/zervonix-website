@@ -119,6 +119,7 @@ const translations = {
     'contact.form.message': 'Cuéntanos sobre tu proyecto',
     'contact.form.submit': 'Enviar mensaje →',
     'contact.form.success': '¡Mensaje enviado! Te contactamos pronto.',
+    'contact.form.recaptcha_error': 'Por favor, verifica que no eres un robot.',
     'contact.info.title': 'Información de contacto',
     'contact.info.email_label': 'Email',
     'contact.info.linkedin_label': 'LinkedIn',
@@ -423,6 +424,7 @@ const translations = {
     'contact.form.message': 'Tell us about your project',
     'contact.form.submit': 'Send message →',
     'contact.form.success': "Message sent! We'll be in touch soon.",
+    'contact.form.recaptcha_error': 'Please verify that you are not a robot.',
     'contact.info.title': 'Contact information',
     'contact.info.email_label': 'Email',
     'contact.info.linkedin_label': 'LinkedIn',
@@ -770,12 +772,25 @@ function initChallengePanel() {
 function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
-  form.addEventListener('submit', () => {
+
+  form.addEventListener('submit', function(e) {
+    const recaptchaResponse = document.querySelector('.g-recaptcha-response');
+    const recaptchaError = document.getElementById('recaptcha-error');
+
+    if (recaptchaResponse && recaptchaResponse.value === '') {
+      e.preventDefault();
+      if (recaptchaError) recaptchaError.style.display = 'block';
+      return false;
+    }
+
+    if (recaptchaError) recaptchaError.style.display = 'none';
+
     setTimeout(() => {
       const successEl = document.getElementById('form-success');
       if (successEl) {
         successEl.style.display = 'block';
         form.reset();
+        if (typeof grecaptcha !== 'undefined') grecaptcha.reset();
       }
     }, 800);
   });
