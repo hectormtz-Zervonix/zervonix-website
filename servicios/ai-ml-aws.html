@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="AI / ML en AWS — Zervonix. SageMaker, Bedrock y GenAI para integrar inteligencia artificial en tus procesos de negocio.">
+  <title>AI / ML en AWS — Zervonix Cloud Consulting</title>
+  <link rel="icon" href="../assets/logo-icon.png" type="image/png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" role="navigation" aria-label="Main navigation">
+  <div class="nav__inner">
+    <a href="../index.html" class="nav__logo">
+      <img src="../assets/logo-mark.png" alt="Zervonix" width="28" height="28">
+      <span style="font-family:'Nunito',sans-serif;font-weight:800">zervonix</span>
+    </a>
+    <ul class="nav__links" role="list">
+      <li class="nav__dropdown">
+        <button class="nav__link" id="nav-services-btn" aria-expanded="false" aria-haspopup="true">
+          <span data-i18n="nav.services">Servicios</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg>
+        </button>
+        <div class="nav__dropdown-menu" role="menu">
+          <a href="aws-migration.html" class="nav__dropdown-item nav__dropdown-item--active" role="menuitem" data-i18n="nav.migration">Migración AWS</a>
+          <span class="nav__dropdown-item" role="menuitem"><span data-i18n="nav.architecture">Arquitectura Cloud</span><span class="soon" data-i18n="nav.coming_soon">(Próximamente)</span></span>
+          <span class="nav__dropdown-item" role="menuitem"><span data-i18n="nav.costs">Optimización de Costos</span><span class="soon" data-i18n="nav.coming_soon">(Próximamente)</span></span>
+          <span class="nav__dropdown-item" role="menuitem"><span data-i18n="nav.security">Seguridad Cloud</span><span class="soon" data-i18n="nav.coming_soon">(Próximamente)</span></span>
+          <span class="nav__dropdown-item" role="menuitem"><span data-i18n="nav.devops">DevOps &amp; CI/CD</span><span class="soon" data-i18n="nav.coming_soon">(Próximamente)</span></span>
+          <span class="nav__dropdown-item" role="menuitem"><span data-i18n="nav.aiml">AI / ML en AWS</span><span class="soon" data-i18n="nav.coming_soon">(Próximamente)</span></span>
+        </div>
+      </li>
+      <li class="nav__dropdown">
+        <button class="nav__link" id="nav-products-btn" aria-expanded="false" aria-haspopup="true">
+          <span data-i18n="footer.products_col">Productos</span>
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2"><polyline points="2,4 6,8 10,4"/></svg>
+        </button>
+        <div class="nav__dropdown-menu" role="menu">
+          <a href="../productos/cygma.html" class="nav__dropdown-item" role="menuitem">Cygma</a>
+        </div>
+      </li>
+      <li><a href="../nosotros.html" class="nav__link" data-i18n="nav.about">Nosotros</a></li>
+      <li><a href="../contacto.html" class="nav__link" data-i18n="nav.contact">Contacto</a></li>
+    </ul>
+    <div class="nav__actions">
+      <a href="../contacto.html" class="btn btn--primary" data-i18n="nav.cta">Hablemos →</a>
+      <div class="lang-toggle" role="group" aria-label="Language selector">
+        <button class="lang-toggle__btn active" data-lang="es">ES</button>
+        <span class="lang-toggle__sep" aria-hidden="true"></span>
+        <button class="lang-toggle__btn" data-lang="en">EN</button>
+      </div>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="aws-migration.html" class="mobile-menu__link" data-i18n="nav.migration">Migración AWS</a>
+  <a href="../productos/cygma.html" class="mobile-menu__link">Cygma</a>
+  <a href="../nosotros.html" class="mobile-menu__link" data-i18n="nav.about">Nosotros</a>
+  <a href="../contacto.html" class="mobile-menu__link" data-i18n="nav.contact">Contacto</a>
+  <div class="mobile-menu__actions">
+    <a href="../contacto.html" class="btn btn--primary" style="text-align:center" data-i18n="nav.cta">Hablemos →</a>
+    <div class="lang-toggle" style="justify-content:center">
+      <button class="lang-toggle__btn active" data-lang="es">ES</button>
+      <span class="lang-toggle__sep" aria-hidden="true"></span>
+      <button class="lang-toggle__btn" data-lang="en">EN</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HERO ============ -->
+<section class="service-page-hero">
+  <div class="container">
+    <div class="service-page-hero__content">
+      <div class="breadcrumb">
+        <a href="../index.html">Zervonix</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <a href="../index.html#servicios" data-i18n="nav.services">Servicios</a>
+        <span class="breadcrumb__sep" aria-hidden="true">/</span>
+        <span data-i18n="nav.aiml">AI / ML en AWS</span>
+      </div>
+      <div style="margin-bottom:20px">
+        <span class="badge badge--aws">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z"/></svg>
+          <span data-i18n="nav.aiml">AI / ML en AWS</span>
+        </span>
+      </div>
+      <h1 style="font-size:clamp(2rem,4vw,3.25rem);font-weight:800;color:var(--color-white);margin-bottom:20px;line-height:1.15" data-i18n="aiml.hero.title">AI / ML en AWS</h1>
+      <p style="font-size:1.1rem;color:var(--color-text-secondary);max-width:600px;line-height:1.8;margin-bottom:36px" data-i18n="aiml.hero.desc">Integra inteligencia artificial en tus procesos con SageMaker, Bedrock y servicios de AI de AWS. Desde PoC hasta producción, con MLOps para mantener tus modelos actualizados.</p>
+      <a href="../contacto.html" class="btn btn--primary btn--large" data-i18n="aiml.hero.cta">Agenda una consulta →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ QUÉ INCLUYE ============ -->
+<section class="section section--elevated">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title" data-i18n="migration.includes.title">¿Qué incluye?</h2>
+    </div>
+    <div class="includes-list">
+      <div class="includes-item" data-i18n="aiml.inc.1">Discovery de casos de uso de AI/ML en tu negocio</div>
+      <div class="includes-item" data-i18n="aiml.inc.2">Evaluación de datos disponibles y calidad</div>
+      <div class="includes-item" data-i18n="aiml.inc.3">Diseño de arquitectura ML en AWS</div>
+      <div class="includes-item" data-i18n="aiml.inc.4">Desarrollo de PoC/MVP con SageMaker o Bedrock</div>
+      <div class="includes-item" data-i18n="aiml.inc.5">Integración con APIs de AI (Rekognition, Comprehend, Textract)</div>
+      <div class="includes-item" data-i18n="aiml.inc.6">Implementación de pipelines MLOps</div>
+      <div class="includes-item" data-i18n="aiml.inc.7">Despliegue de modelos en producción</div>
+      <div class="includes-item" data-i18n="aiml.inc.8">Monitoreo de drift y performance de modelos</div>
+      <div class="includes-item" data-i18n="aiml.inc.9">Integración con aplicaciones existentes</div>
+      <div class="includes-item" data-i18n="aiml.inc.10">Transferencia de conocimiento al equipo</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROCESO ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title" data-i18n="migration.process.title">Nuestro proceso</h2>
+    </div>
+    <div class="process-steps">
+      <div class="process-step">
+        <div class="process-step__num" aria-hidden="true">01</div>
+        <h3 class="process-step__title" data-i18n="aiml.step1.title">Discovery</h3>
+        <p class="process-step__desc" data-i18n="aiml.step1.desc">Identificación de casos de uso de AI/ML con mayor impacto en el negocio.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num" aria-hidden="true">02</div>
+        <h3 class="process-step__title" data-i18n="aiml.step2.title">PoC</h3>
+        <p class="process-step__desc" data-i18n="aiml.step2.desc">Desarrollo rápido de prueba de concepto para validar viabilidad técnica.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num" aria-hidden="true">03</div>
+        <h3 class="process-step__title" data-i18n="aiml.step3.title">Producción</h3>
+        <p class="process-step__desc" data-i18n="aiml.step3.desc">Despliegue de modelos con infraestructura escalable y monitoreo.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__num" aria-hidden="true">04</div>
+        <h3 class="process-step__title" data-i18n="aiml.step4.title">MLOps</h3>
+        <p class="process-step__desc" data-i18n="aiml.step4.desc">Pipelines de reentrenamiento, monitoreo de drift y mejora continua.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BENEFICIOS ============ -->
+<section class="section section--elevated">
+  <div class="container">
+    <div class="section__header">
+      <h2 class="section__title" data-i18n="migration.benefits.title">Beneficios</h2>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit-card">
+        <div class="benefit-card__metric">60%</div>
+        <h3 class="benefit-card__title" data-i18n="aiml.ben1.title">Automatización de tareas repetitivas</h3>
+        <p class="benefit-card__desc" data-i18n="aiml.ben1.desc">AI procesa documentos, imágenes y texto que antes requerían trabajo manual.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__metric" data-i18n="aiml.ben2.metric">3 semanas</div>
+        <h3 class="benefit-card__title" data-i18n="aiml.ben2.title">Tiempo promedio de PoC a demo</h3>
+        <p class="benefit-card__desc" data-i18n="aiml.ben2.desc">Validación rápida de casos de uso antes de invertir en implementación completa.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__metric">85%</div>
+        <h3 class="benefit-card__title" data-i18n="aiml.ben3.title">Precisión típica en modelos</h3>
+        <p class="benefit-card__desc" data-i18n="aiml.ben3.desc">Modelos entrenados con datos de calidad alcanzan precisión production-ready.</p>
+      </div>
+      <div class="benefit-card">
+        <div class="benefit-card__metric">40%</div>
+        <h3 class="benefit-card__title" data-i18n="aiml.ben4.title">Reducción de procesamiento manual</h3>
+        <p class="benefit-card__desc" data-i18n="aiml.ben4.desc">Automatización de workflows que antes consumían horas de trabajo humano.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PARA QUIÉN ES ============ -->
+<section class="section">
+  <div class="container">
+    <div style="max-width:720px;margin:0 auto">
+      <h2 class="section__title" style="margin-bottom:20px" data-i18n="migration.ideal.title">¿Para quién es este servicio?</h2>
+      <p style="font-size:1rem;color:var(--color-text-secondary);line-height:1.8;margin-bottom:32px" data-i18n="migration.ideal.desc">Empresas que corren en data centers propios o en otros clouds que quieren migrar a AWS. Equipos que ya están en AWS con arquitecturas heredadas que necesitan modernización.</p>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+        <div style="padding:20px;background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:10px">
+          <div style="margin-bottom:10px" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+          </div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--color-white);margin-bottom:6px" data-i18n="aiml.aud1.title">Empresas explorando AI</h3>
+          <p style="font-size:0.82rem;color:var(--color-text-secondary);line-height:1.6" data-i18n="aiml.aud1.desc">Saben que AI puede ayudar pero no saben por dónde empezar.</p>
+        </div>
+        <div style="padding:20px;background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:10px">
+          <div style="margin-bottom:10px" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5V19A9 3 0 0 0 21 19V5"/><path d="M3 12A9 3 0 0 0 21 12"/></svg>
+          </div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--color-white);margin-bottom:6px" data-i18n="aiml.aud2.title">Equipos con datos sin explotar</h3>
+          <p style="font-size:0.82rem;color:var(--color-text-secondary);line-height:1.6" data-i18n="aiml.aud2.desc">Tienen datos valiosos pero no los están usando para tomar decisiones.</p>
+        </div>
+        <div style="padding:20px;background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:10px">
+          <div style="margin-bottom:10px" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m17 2 4 4-4 4"/><path d="M3 11v-1a4 4 0 0 1 4-4h14"/><path d="m7 22-4-4 4-4"/><path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg>
+          </div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--color-white);margin-bottom:6px" data-i18n="aiml.aud3.title">Organizaciones con procesos manuales</h3>
+          <p style="font-size:0.82rem;color:var(--color-text-secondary);line-height:1.6" data-i18n="aiml.aud3.desc">Tareas repetitivas que consumen tiempo y podrían automatizarse.</p>
+        </div>
+        <div style="padding:20px;background:var(--color-bg-card);border:1px solid var(--color-border);border-radius:10px">
+          <div style="margin-bottom:10px" aria-hidden="true">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/><path d="M5 3v4"/><path d="M19 17v4"/><path d="M3 5h4"/><path d="M17 19h4"/></svg>
+          </div>
+          <h3 style="font-size:0.95rem;font-weight:700;color:var(--color-white);margin-bottom:6px" data-i18n="aiml.aud4.title">CTOs evaluando GenAI</h3>
+          <p style="font-size:0.82rem;color:var(--color-text-secondary);line-height:1.6" data-i18n="aiml.aud4.desc">Quieren entender cómo Bedrock y LLMs pueden integrarse a sus productos.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CTA ============ -->
+<section class="cta-final">
+  <div class="container">
+    <h2 class="cta-final__title" data-i18n="aiml.cta.title">¿Listo para integrar AI en tu negocio?</h2>
+    <p class="cta-final__subtitle" data-i18n="cta.subtitle">Hablemos de tu proyecto. Primera consulta sin costo.</p>
+    <a href="../contacto.html" class="btn btn--primary btn--large" data-i18n="aiml.cta.btn">Hablemos de tu proyecto AI →</a>
+  </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div class="footer__brand">
+        <a href="../index.html" class="footer__brand-logo">
+          <img src="../assets/logo-mark.png" alt="Zervonix" width="24" height="24">
+          <span>zervonix</span>
+        </a>
+        <p class="footer__tagline" data-i18n="footer.tagline">Cloud Consulting LATAM</p>
+        <a href="mailto:info@zervonix.com" class="footer__email">info@zervonix.com</a>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title" data-i18n="footer.services_col">Servicios</div>
+        <ul class="footer__links">
+          <li><a href="aws-migration.html" class="footer__link" data-i18n="nav.migration">Migración AWS</a></li>
+          <li><a href="../contacto.html" class="footer__link" data-i18n="nav.architecture">Arquitectura Cloud</a></li>
+          <li><a href="../contacto.html" class="footer__link" data-i18n="nav.costs">Optimización de Costos</a></li>
+          <li><a href="../contacto.html" class="footer__link" data-i18n="nav.security">Seguridad Cloud</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title">&nbsp;</div>
+        <ul class="footer__links">
+          <li><a href="../contacto.html" class="footer__link" data-i18n="nav.devops">DevOps &amp; CI/CD</a></li>
+          <li><a href="../contacto.html" class="footer__link" data-i18n="nav.aiml">AI / ML en AWS</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title" data-i18n="footer.products_col">Productos</div>
+        <ul class="footer__links">
+          <li><a href="../productos/cygma.html" class="footer__link">Cygma</a></li>
+        </ul>
+      </div>
+      <div class="footer__col">
+        <div class="footer__col-title" data-i18n="footer.company_col">Compañía</div>
+        <ul class="footer__links">
+          <li><a href="../nosotros.html" class="footer__link" data-i18n="footer.about">Nosotros</a></li>
+          <li><a href="../contacto.html" class="footer__link" data-i18n="footer.contact">Contacto</a></li>
+          <li><a href="https://linkedin.com/company/zervonix" class="footer__link" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span class="footer__copyright" data-i18n="footer.copyright">© 2026 Zervonix. Todos los derechos reservados.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
